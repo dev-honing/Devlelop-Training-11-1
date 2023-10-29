@@ -15,5 +15,15 @@ function validateEmail(email) {
         return false;
       }    
     });
-}
+
+    // 필터링된 배열에서 '@'와 '.' 문자의 존재 여부를 확인
+    // includes() 메서드는 배열 메서드이다.
+    // 원활한 사용을 위해서는 공식문서(MDN) 사용이 필수적
+    const hasAtSign = filteredArray.includes("@");
+    const hasDot = filteredArray.includes(".");
+
+    return hasAtSign && hasDot;
+  } else {
+    console.log(email + "<- 이 매개변수는 올바른 데이터 타입이 아닙니다.");
+  }
 }
