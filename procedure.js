@@ -15,10 +15,11 @@ function validateEmail(email) {
       }
     }
   
-  
   return hasAtSign && hasDot;
 
 } else {
   console.log(email + "<- 이 매개변수는 올바른 데이터 타입이 아닙니다.")
 }
 }
+
+module.exports = validateEmail;
